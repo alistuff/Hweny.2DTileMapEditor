@@ -7,7 +7,7 @@ Hweny.2DTileMapEditor
 **
 
 
-编译项目的时候请把Assets文件夹复制到：
+编译项目时请把Assets文件夹复制到：
 
 *调试模式bin//Debug文件夹内*
 
