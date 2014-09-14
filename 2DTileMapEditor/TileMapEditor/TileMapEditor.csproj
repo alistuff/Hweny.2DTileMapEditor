@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5122FD82-6520-47A7-9D64-9CFA1617F008}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TileMapEditor</RootNamespace>
+    <AssemblyName>TileMapEditor</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>project.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ControlsEx\ColorComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlsEx\ColorComboBox.Designer.cs">
+      <DependentUpon>ColorComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlsEx\DraggableTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ctl_DoubleBufferCanvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctl_DoubleBufferCanvas.Designer.cs">
+      <DependentUpon>ctl_DoubleBufferCanvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EditableMapView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EditableMapView.Designer.cs">
+      <DependentUpon>EditableMapView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctl_EditHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctl_EditHistory.Designer.cs">
+      <DependentUpon>ctl_EditHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctl_EditMapLayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctl_EditMapLayer.Designer.cs">
+      <DependentUpon>ctl_EditMapLayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MapSettingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MapSettingView.Designer.cs">
+      <DependentUpon>MapSettingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MiniMapView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MiniMapView.Designer.cs">
+      <DependentUpon>MiniMapView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProjectView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectView.Designer.cs">
+      <DependentUpon>ProjectView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctl_ScrollCanvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctl_ScrollCanvas.Designer.cs">
+      <DependentUpon>ctl_ScrollCanvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TilesetView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TilesetView.Designer.cs">
+      <DependentUpon>TilesetView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ControlsEx\PromptTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_OutputPictureMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_OutputPictureMap.Designer.cs">
+      <DependentUpon>frm_OutputPictureMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Setting.Designer.cs">
+      <DependentUpon>frm_Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_Toolkit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_Toolkit.Designer.cs">
+      <DependentUpon>frm_Toolkit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\Command.cs" />
+    <Compile Include="Lib\CommandManager.cs" />
+    <Compile Include="Lib\CommandSetTile.cs" />
+    <Compile Include="Lib\CustomEventArgs.cs" />
+    <Compile Include="Forms\frm_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_About.Designer.cs">
+      <DependentUpon>frm_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_MainForm.Designer.cs">
+      <DependentUpon>frm_MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_NewMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_NewMap.Designer.cs">
+      <DependentUpon>frm_NewMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_NewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_NewProject.Designer.cs">
+      <DependentUpon>frm_NewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_NewTileset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_NewTileset.Designer.cs">
+      <DependentUpon>frm_NewTileset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\IComponentObserver.cs" />
+    <Compile Include="Lib\IComponentSubject.cs" />
+    <Compile Include="Lib\Setting.cs" />
+    <Compile Include="Lib\TileMapClipboard.cs" />
+    <Compile Include="Lib\Tool.cs" />
+    <Compile Include="Lib\ToolFill.cs" />
+    <Compile Include="Lib\ToolEraser.cs" />
+    <Compile Include="Lib\ToolPen.cs" />
+    <Compile Include="Lib\ToolPointer.cs" />
+    <Compile Include="Lib\ToolRectangle.cs" />
+    <Compile Include="Lib\ToolSelectBox.cs" />
+    <Compile Include="Lib\TreeViewBinaryFormatter.cs" />
+    <Compile Include="ApplicationConsts.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Main\GameType.cs" />
+    <Compile Include="Test\Setting\Views\frm_CharSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Setting\Views\frm_CharSet.Designer.cs">
+      <DependentUpon>frm_CharSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Setting\ISettingPage.cs" />
+    <Compile Include="Test\Setting\SettingPageManager.cs" />
+    <Compile Include="Test\Setting\Views\frm_EditAnimation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Setting\Views\frm_EditAnimation.Designer.cs">
+      <DependentUpon>frm_EditAnimation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Setting\Views\frm_GameSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Setting\Views\frm_GameSetting.Designer.cs">
+      <DependentUpon>frm_GameSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Setting\Views\PlayerSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Test\Setting\Views\PlayerSettingPage.Designer.cs">
+      <DependentUpon>PlayerSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Setting\GameSetting.cs" />
+    <Compile Include="Test\Setting\Views\GameSettingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Test\Setting\Views\GameSettingPage.Designer.cs">
+      <DependentUpon>GameSettingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Setting\PlayerSetting.cs" />
+    <Compile Include="Test\Input\IKeyListener.cs" />
+    <Compile Include="Test\Input\IMouseListener.cs" />
+    <Compile Include="Test\Main\AssetsLoader.cs" />
+    <Compile Include="Test\Main\Camera.cs" />
+    <Compile Include="Test\Main\Game.cs" />
+    <Compile Include="Test\Sprite\Animation.cs" />
+    <Compile Include="Test\Sprite\AnimationEventArgs.cs" />
+    <Compile Include="Test\Sprite\AnimationKeyFrame.cs" />
+    <Compile Include="Test\Sprite\Animator.cs" />
+    <Compile Include="Test\Sprite\Player.cs" />
+    <Compile Include="Test\MyAssetsLoader.cs" />
+    <Compile Include="Test\MyGame.cs" />
+    <Compile Include="Test\Scene\GameLevelScene.cs" />
+    <Compile Include="Test\Scene\GameScene.cs" />
+    <Compile Include="Test\Scene\GameSceneManager.cs" />
+    <Compile Include="Test\Main\GameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Main\GameWindowEvents.cs" />
+    <Compile Include="Test\Sprite\SpriteSheetSplitOptions.cs" />
+    <Compile Include="Test\TileMap\TileMapRender.cs" />
+    <Compile Include="Utilities.cs" />
+    <EmbeddedResource Include="Controls\ctl_EditMapLayer.resx">
+      <DependentUpon>ctl_EditMapLayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MapSettingView.resx">
+      <DependentUpon>MapSettingView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MiniMapView.resx">
+      <DependentUpon>MiniMapView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectView.resx">
+      <DependentUpon>ProjectView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctl_ScrollCanvas.resx">
+      <DependentUpon>ctl_ScrollCanvas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TilesetView.resx">
+      <DependentUpon>TilesetView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_About.resx">
+      <DependentUpon>frm_About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_MainForm.resx">
+      <DependentUpon>frm_MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_NewMap.resx">
+      <DependentUpon>frm_NewMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_NewProject.resx">
+      <DependentUpon>frm_NewProject.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_NewTileset.resx">
+      <DependentUpon>frm_NewTileset.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Main\GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Setting\Views\frm_CharSet.resx">
+      <DependentUpon>frm_CharSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Setting\Views\frm_EditAnimation.resx">
+      <DependentUpon>frm_EditAnimation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Setting\Views\frm_GameSetting.resx">
+      <DependentUpon>frm_GameSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Setting\Views\GameSettingPage.resx">
+      <DependentUpon>GameSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Setting\Views\PlayerSettingPage.resx">
+      <DependentUpon>PlayerSettingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TileMapDoc\TileMapDoc.csproj">
+      <Project>{CB4D23E3-9D02-4C4D-839A-48D6B300BC2E}</Project>
+      <Name>TileMapDoc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TileMapLib\TileMapLib.csproj">
+      <Project>{3AEC0E0B-4198-4314-A59E-B56E1443A9A5}</Project>
+      <Name>TileMapLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TileMapRenderer\TileMapRenderer.csproj">
+      <Project>{5A4E0F3F-4368-45C4-A996-D4625BA8C670}</Project>
+      <Name>TileMapRenderer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Lib\Rectangle.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Lib\Fill.cur" />
+    <EmbeddedResource Include="Lib\Pen.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frm_Toolkit.resx">
+      <DependentUpon>frm_Toolkit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lib\Eraser.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ControlsEx\ColorComboBox.resx">
+      <DependentUpon>ColorComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EditableMapView.resx">
+      <DependentUpon>EditableMapView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctl_EditHistory.resx">
+      <DependentUpon>ctl_EditHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_OutputPictureMap.resx">
+      <DependentUpon>frm_OutputPictureMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_Setting.resx">
+      <DependentUpon>frm_Setting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lib\SelectBox.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player.png" />
+    <None Include="Resources\transparent.png" />
+    <None Include="bin\Debug\Assets\Gfx\player.png" />
+    <Content Include="project.ico" />
+    <None Include="Resources\ico_block2.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
